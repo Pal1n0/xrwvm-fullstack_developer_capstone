@@ -1,0 +1,87 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+</head>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <!-- Banner -->
+   <div class="banner" style="margin-top:3%;">
+    <h1>Contact Us</h1>
+    <p>Have questions or need more information? Reach out to our team and we’ll get back to you promptly!</p>
+  </div>
+
+  <!-- Contact Info Cards -->
+  <div class="row">
+    <div class="card" style="width: 30%;">
+      <div class="card-body">
+        <p class="title">Dealership Location</p>
+        <p>1234 Main Street, Springfield, IL 62704</p>
+        <p>Phone: (555) 123-4567</p>
+        <p>Email: info@bigbrandcars.com</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 30%;">
+      <div class="card-body">
+        <p class="title">Sales Department</p>
+        <p>Contact our sales team for inquiries about vehicles, pricing, and offers.</p>
+        <p>Email: sales@bigbrandcars.com</p>
+        <p>Phone: (555) 234-5678</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 30%;">
+      <div class="card-body">
+        <p class="title">Support & Customer Relations</p>
+        <p>For after-sales support, warranty questions, or general assistance.</p>
+        <p>Email: support@bigbrandcars.com</p>
+        <p>Phone: (555) 345-6789</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="form_panel">
+    <h2 style="color:white;">Send Us a Message</h2>
+    <form action="/submit-contact" method="POST">
+      <div class="input_panel">
+        <label for="name" style="color:white; width: 100px;">Name:</label>
+        <input type="text" id="name" name="name" required style="flex:1; margin-left:10px;">
+      </div>
+      <div class="input_panel">
+        <label for="email" style="color:white; width: 100px;">Email:</label>
+        <input type="email" id="email" name="email" required style="flex:1; margin-left:10px;">
+      </div>
+      <div class="input_panel">
+        <label for="message" style="color:white; width: 100px;">Message:</label>
+        <textarea id="message" name="message" rows="5" required style="flex:1; margin-left:10px;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top:10px;" onclick="event.preventDefault();">Send Message</button>
+    </form>
+  </div>
+
+</div>
+</body>
+</html>
