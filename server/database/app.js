@@ -5,7 +5,9 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 const  cors = require('cors');
 const app = express();
-const port = 3030;
+// const port = 3030;
+const port = process.env.PORT || 3030;
+
 
 app.use(cors());
 app.use(require('body-parser').urlencoded({ extended: false }));
@@ -116,6 +118,12 @@ app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
 });
 
 // Start the Express server
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
 });
+
+
+//app.listen(port, () => {
+//console.log(`Server is running on http://localhost:${port}`);
+//})
